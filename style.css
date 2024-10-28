@@ -389,6 +389,9 @@ body {
         gap: 20px;
         border: none;
     }
+    .content-top{
+        padding-inline: 8px;
+    }
 
 }
 
