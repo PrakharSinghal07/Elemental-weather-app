@@ -25,6 +25,11 @@ const monthNames = [
     "July", "August", "September", "October", "November", "December"
 ];
 var one = new Date();
+
+if(localStorage.getItem('isDarkMode') === '1'){
+    document.body.classList.add('dark-mode');
+}
+
 const setData = () => {
     var one = new Date();
 
@@ -193,4 +198,11 @@ currentLocationWeather.addEventListener('click', () => {
 
 theme.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    if(document.body.classList.contains('dark-mode')){
+        localStorage.setItem('isDarkMode', 1);
+    }
+    else{
+        localStorage.setItem('isDarkMode', 0);
+
+    }
 })
