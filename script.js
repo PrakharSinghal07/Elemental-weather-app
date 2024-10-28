@@ -133,6 +133,16 @@ else {
         areCoordinatesObtained = true;
     }
     function error() {
+        fetch(`https://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=paris`)
+        .then((res) => res.json())
+        .then((data) => {
+            displayWeather(data)
+            // localStorage.setItem('recentPlace', input.value);
+        }).catch((error) => {
+            console.log(error);
+            loadingScreen.style.display = 'none';
+
+        })
         console.log("Unable to retrieve your location");
     }
 }
