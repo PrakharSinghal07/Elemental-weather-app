@@ -101,7 +101,7 @@ const displayWeather = (data) => {
 }
 
 if (localStorage.getItem('latitude')) {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=${localStorage.getItem('latitude')},${localStorage.getItem('longitude')}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=${localStorage.getItem('latitude')},${localStorage.getItem('longitude')}`)
         .then((res) => res.json())
         .then((data) => {
             displayWeather(data)
@@ -121,7 +121,7 @@ else {
     function success(position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        fetch(`http://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=${latitude},${longitude}`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=${latitude},${longitude}`)
             .then((res) => res.json())
             .then((data) => {
                 displayWeather(data);
@@ -164,7 +164,7 @@ currentLocationWeather.addEventListener('click', () => {
     function success(position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        fetch(`http://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=${latitude},${longitude}`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=${latitude},${longitude}`)
             .then((res) => res.json())
             .then((data) => {
                 displayWeather(data);
