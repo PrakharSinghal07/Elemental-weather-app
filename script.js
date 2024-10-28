@@ -13,12 +13,14 @@ const input = document.querySelector('.search-field');
 const search = document.querySelector('.search');
 const loadingScreen = document.getElementById('loading-screen')
 const theme = document.querySelector('.theme');
+const themeText = document.querySelector('.theme span');
+const themeIcon = document.querySelector('.theme i');
 const currentLocationWeather = document.querySelector('.current-location-btn');
 const minTemps = [...document.querySelectorAll('.daily-forecast-card-temperature-min')]
 const maxTemps = [...document.querySelectorAll('.daily-forecast-card-temperature-max')]
 let forecastDate = [...document.querySelectorAll('.daily-forecast-card-date')];
 forecastDate.shift()
-
+// console.log(themeIcon);
 
 const monthNames = [
     "January", "February", "March", "April", "May", "June",
@@ -26,8 +28,10 @@ const monthNames = [
 ];
 var one = new Date();
 
-if(localStorage.getItem('isDarkMode') === '1'){
+if (localStorage.getItem('isDarkMode') === '1') {
     document.body.classList.add('dark-mode');
+    themeText.innerText = 'Light Mode'
+    themeIcon.setAttribute('class', 'fa-solid fa-sun')
 }
 
 const setData = () => {
@@ -139,15 +143,15 @@ else {
     }
     function error() {
         fetch(`https://api.weatherapi.com/v1/current.json?key=ba0a0a300d1148b6813125405242710&q=paris`)
-        .then((res) => res.json())
-        .then((data) => {
-            displayWeather(data)
-            // localStorage.setItem('recentPlace', input.value);
-        }).catch((error) => {
-            console.log(error);
-            loadingScreen.style.display = 'none';
+            .then((res) => res.json())
+            .then((data) => {
+                displayWeather(data)
+                // localStorage.setItem('recentPlace', input.value);
+            }).catch((error) => {
+                console.log(error);
+                loadingScreen.style.display = 'none';
 
-        })
+            })
         console.log("Unable to retrieve your location");
     }
 }
@@ -198,11 +202,19 @@ currentLocationWeather.addEventListener('click', () => {
 
 theme.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    if(document.body.classList.contains('dark-mode')){
+    if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('isDarkMode', 1);
+        themeText.innerText = 'Light Mode'
+        themeIcon.setAttribute('class', 'fa-solid fa-sun')
+        // console.log(themeIcon);
+        // themeIcon.classList.add('fa-solid fa-sun')
     }
-    else{
+    else {
         localStorage.setItem('isDarkMode', 0);
+
+        themeText.innerText = 'Dark Mode'
+        themeIcon.setAttribute('class', 'fa-solid fa-moon')
+
 
     }
 })
