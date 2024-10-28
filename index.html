@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1>Elemental</h1>
+            <div class="theme">
+                <i class="fa-regular fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+        </div>
+    </header>
+    <div id="loading-screen" class="loading-screen">
+        <p>Loading...</p>
+    </div>
+    <main>
+        <div class="content-top">
+            <div class="greet">
+                <p class="greet-text">Good Morning</p>
+                <p class="greet-date">12 OCT 2024 </p>
+                <p class="greet-time">12:45 PM</p>
+            </div>
+            <div class="input">
+                <div class="location-input">
+                    <input type="text" placeholder="Search..." class="search-field">
+                    <i class="fa-solid fa-magnifying-glass search"></i>
+                </div>
+                <div>
+                    <button class="current-location-btn">Show Weather at my location</button>
+                </div>
+            </div>
+        </div>
+        <p class="temp-location"></p>
+        <div class="content-middle">
+            <div class="temperature">
+                <p class="temp-value"></p>
+                <p class="temp-text"></p>
+            </div>
+            <div class="weather-details">
+               <div class="wind">
+                <!-- <i class="fa-solid fa-wind"></i> -->
+                 <img src="wind.svg" alt="">
+                <span></span>
+               </div>
+               <div class="humidity">
+                <!-- <i class="fa-solid fa-droplet"></i> -->
+                 <img src="droplet.svg" alt="">
+                <span></span>
+               </div>
+               <div class="rain">
+                <img src="rain.svg" alt="">
+                <span></span>
+               </div>
+               
+               <div>
+                <p class="feels-like"></p>
+               </div>
+            </div>
+        </div>
+        <div class="content-end">
+            <p class="daily-forecast-text">Daily Forecast</p>
+            <div class="daily-forecast-container">
+                <div class="daily-forecast-card first">
+                    <p class="daily-forecast-card-date">Today</p>
+                    <p class="daily-forecast-card-temperature-min">;</p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+                <div class="daily-forecast-card">
+                    <p class="daily-forecast-card-date"></p>
+                    <p class="daily-forecast-card-temperature-min"></p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+                <div class="daily-forecast-card">
+                    <p class="daily-forecast-card-date"></p>
+                    <p class="daily-forecast-card-temperature-min"></p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+                <div class="daily-forecast-card">
+                    <p class="daily-forecast-card-date"></p>
+                    <p class="daily-forecast-card-temperature-min"></p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+                <div class="daily-forecast-card">
+                    <p class="daily-forecast-card-date"></p>
+                    <p class="daily-forecast-card-temperature-min"></p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+                <div class="daily-forecast-card">
+                    <p class="daily-forecast-card-date"></p>
+                    <p class="daily-forecast-card-temperature-min"></p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+                <div class="daily-forecast-card">
+                    <p class="daily-forecast-card-date"></p>
+                    <p class="daily-forecast-card-temperature-min"></p>
+                    <p class="daily-forecast-card-temperature-max"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
