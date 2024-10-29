@@ -49,7 +49,6 @@ body {
     
     background-color: var(--background-color);
     color: var(--text-color);
-    width: 100vw;
 }
 
 
@@ -58,7 +57,6 @@ body {
 
 .header {
     color: var(--header-color);
-    /* width: 90%; */
     background-color: var(--header-background);
 
     display: flex;
@@ -87,12 +85,9 @@ body {
 
 .greet-date,
 .greet-time {
-    /* text-align: center; */
-    /* margin: 20px 0px; */
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-color);
-    /* display: inline-block; */
 }
 
 .greet-text {
@@ -119,7 +114,6 @@ body {
     border-radius: 15px;
     outline: none;
     font-weight: 500;
-    /* text-decoration-line: underline; */
     font-size: 1.1rem;
     padding: 5px 10px;
     width: 200px;
@@ -143,13 +137,6 @@ body {
 
 .temp-location {
     font-size: 2.5rem;
-    /* margin-left: 15px; */
-    position: relative;
-    /* bottom: 15px; */
-    /* right: 5px; */
-    left: 7px;
-    font-weight: 500;
-    /* text-align: center; */
     color: var(--location-color);
     text-align: center;
 
@@ -164,10 +151,8 @@ body {
 
 .temp-text {
     font-size: 3rem;
-    /* margin-left: 15px; */
     position: relative;
     bottom: 15px;
-    /* right: 5px; */
     left: 7px;
     font-weight: 500;
     color: var(--description-color);
@@ -182,7 +167,6 @@ body {
     font-size: 1.5rem;
     position: relative;
     right: 15px;
-    /* padding-bottom: 30px; */
     color: var();
 }
 
@@ -212,7 +196,6 @@ body {
 }
 
 .humidity img {
-    /* margin-left: 3px; */
     height: 20px;
     width: 20px;
 
@@ -226,7 +209,6 @@ body {
     margin-top: 50px;
     font-size: 1.5rem;
     font-weight: 500;
-    /* text-decoration-line: underline; */
 
 }
 
@@ -250,7 +232,6 @@ body {
 }
 
 .daily-forecast-card {
-    /* border: 2px solid black; */
     border-radius: 10px;
     padding: 10px;
 
@@ -306,17 +287,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    /* Semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     color: #333;
-    /* Text color */
     z-index: 9999;
-    /* Ensure it's on top of other elements */
     display: none;
-    /* Hidden by default */
 }
 
 
@@ -350,10 +327,6 @@ body {
 
     .daily-forecast-text {
         margin-top: 20px;
-    }
-
-    .temp-value {
-        /* font-size: 5rem; */
     }
 
     .greet {
